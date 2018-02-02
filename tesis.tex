@@ -109,16 +109,6 @@ Este trabalho de conclusão de curso propõe uma aplicação mobile para o Regis
 
 Neste capitulo vamos apresentar um descrição dos objetivos deste trabalho explicitando suas partes e tecnologias envolvidas, o que um registro de ponto, desde de quanto ele vem sendo utilizado no Brasil, vamos apresentar as portarias que regulamentam seu uso.
 
-\section{O Trabalho}
-
-Este trabalho tem o intuito de permitir o registro de ponto pelo empregador e trabalhador por meio de um smartphone, a ideia é ter um app que obtenha coordenadas ou um qr-code, a hora certa do aparelho e de uma entidade que ofereça o serviço de carimbos do tempo e enviar para o backend do sistema.
-
-O backend deve utilizar parte das estruturas de dados previstas na portaria 1.510 do MTE, que regulamenta o registro de ponto, com o intuito de estar de acordo com outros relogios de ponto reais. Essas estruturas de dados serão visiveis porem somente de leitura por parte das empresas, para isso vamos contar com um contrato inteligente que será usado como folha de ponto, cada vez que um funcionário entrar ou sair da empresa as estruturas de dados serão modificadas para refletir a entrada ou saida desse trabalhador.
-
-Além disso outra ferramenta será um webapp com um dashboard mostrando como esta a frequencia de cada funcionario. Os funcionários por sua vez podem ver sua frequencia e todo seu histórico de trabalho por meio do aplicativo no seu smartphone.
-
-O foco principal dessa ferramenta é apoiar o trabalhador e o empregador em situações de falha de um equipamnento de registro de ponto, bem como em situações de desentendimento entre ambos.
-
 \section{Registro de Ponto}
 
 O registro de ponto foi criado em 20 de Novembro de 1888 por Willard Le Grand Bundy um joallheiro de Auburn, Nova Iorque ele criou em 1889 a International Time Recording. Abaixo a imagem de sua patente:
@@ -129,7 +119,7 @@ Seu irmão entrou no negocio e começaram a fabricar relogios em grande escala, 
 
 Um relogio de ponto básico apenas carimba a data e o horario em cartões dos funcionarios. Mas haviam relogios que foram criados por essa empresa de Bundy que continham por exemplo uma chave para cada funcionario, evitando fraudes. Hoje em dia existem relogios de ponto que utilizam biometria, e mesmo assim são burlados por meio de dedos de silicone por exemplo.
 
-\section{Regulamentação do Mninistério Trabalho e Emprego}
+\section{Regulamentação do Ministério Trabalho e Emprego}
 
 O registro de ponto no Brasil é regulamentado portaria do Ministério do Trabalho e emprego MTE Nº 1.510, de 21 de Agosto de 2009 e entrou vigência plena em 2011, o registro de ponto é obrigatorio e não deve em hiposete alguma ser alterado pelo empregador, existe um conjunto de empresas homologadas pelo MTE que tem permissão para oferecer estes equipamentos que segue um conjunto de normas especificas descritas na portaria acima citada.
 
@@ -139,23 +129,28 @@ O equipamento possui uma porta USB, de auditoria, para que os fiscais do MTE pos
 
 Mas mesmo com todos esses mecanismos de proteção a ainda existe insegurança tanto por parte dos empregadores como dos empregados.
 
-% Fale rapidamente sobre os requisitos de segurança impostos pela Portaria 1510
+TODO: falar sobre o carimbo do tempo
 
-%\section{Objetivos específicos}
+\section{O Trabalho}
 
-%O objetivo geral é criar ....
+Este trabalho tem o intuito de permitir o registro de ponto pelo empregador e trabalhador por meio de um smartphone, a ideia é ter um app que obtenha coordenadas ou um qr-code, a hora certa do aparelho e de uma entidade que ofereça o serviço de carimbos do tempo e enviar para o backend do sistema.
 
-%\begin{itemize}
-% \item Desenvolver ...
-%\end{itemize}
+O backend deve utilizar parte das estruturas de dados previstas na portaria 1.510 do MTE, que regulamenta o registro de ponto, com o intuito de estar de acordo com outros relogios de ponto reais. Essas estruturas de dados serão visiveis porem somente de leitura por parte das empresas, para isso vamos contar com um contrato inteligente que será usado como folha de ponto, cada vez que um funcionário entrar ou sair da empresa as estruturas de dados serão modificadas para refletir a entrada ou saida desse trabalhador.
 
-%\section{Justificativa}
+Além disso outra ferramenta será um webapp com um dashboard mostrando como esta a frequencia de cada funcionario. Os funcionários por sua vez podem ver sua frequencia e todo seu histórico de trabalho por meio do aplicativo no seu smartphone.
 
-%\section{Metodologia}
+O foco principal dessa ferramenta é apoiar o trabalhador e o empregador em situações de falha de um equipamnento de registro de ponto, bem como em situações de desentendimento entre ambos.
 
-%Análise de papers em bases de artigos cientificos. Leitura dos artigos similares a temática escolhida, e artigos relacionados aos conhecimentos basais necessários, para escrita deste projeto.
 
-%\section{Estrutura do Trabalho}
+
+\subsection{Blockchain}
+para evitar fraudes
+\subsection{GPS}
+para localização especial (outros mecanismos alternativos de localização)
+\subsection{QR-Code}
+\subsection{App para dispositivos moveis}
+
+
 
 
 
@@ -165,19 +160,16 @@ Mas mesmo com todos esses mecanismos de proteção a ainda existe insegurança t
 
 \chapter{Registro Eletronico de Ponto}
 
-Use a Portaria 1510 e a 373 para isso. 
+%Escreva sobre os requisitos funcionais e nã funcionais sobre o registrado de ponto ( eletrônico ) e sobre os sistemas de registro de ponto ( SREP ). Use a Portaria 1510 e a 373 para isso. Também veja os mais diversos sites na Internet sobre produto, sistemas etc.... e suas consideracoes
 
-Também veja os mais diversos sites na Internet sobre produto, sistemas etc.... e suas consideracoes
+%Veja exemplos de apps para registro de ponto
 
-Veja exemplos de apps para registro de ponto
 
 \section{Requisitos funcionais}
 
 \section{Requisitos não funcionais}
 
 \section{Sistemas de registro de ponto ( SREP )}
-
-%\section{Trabalhos Relacionados}
 
 
 
@@ -188,11 +180,30 @@ Veja exemplos de apps para registro de ponto
 
 \chapter{Tecnologias Relacionadas}
 
+% Escreva sobre assinatura digital, carimbo do tempo, blockchain ( e ferrramentas ), apps móveis
+
+Neste capitulo vamos apresentar as principais tecnologias que são utilizadas neste trabalho. Como elas contribuem para construir uma solução de registro eletrônico de ponto seguro.
+
+\section{Assinatura Digital}
+
 \section{Blockchain}
 
-\section{GPS}
+test-RPC (O que é RPC)
+
+NodeJS
 
 \section{QR-Code}
+
+\section{Carimbo do Tempo}
+
+O carimbo do tempo é regulamentado pela ... e é utilizado para ...
+
+\section{Apps Móveis}
+
+O desenvolvimento de apps móveis é algo extremamente importante dado o aumento significativo do numero destes dispositivos, ele já ultrapassou o numero de computadores, cada vez mais a população adere a este tipo de tecnologia e surgiram varias empresas que oferecem deste hardware a software (sistemas operacionais e aplicativos) para resolver demandas dos usuários.
+
+Existem diversos frameworks que permitem desenvolver apps móveis para os sistemas operacionais mais conhecidos, neste priojeto vamos utilizar o Ionic.
+
 
 
 
@@ -200,6 +211,8 @@ Veja exemplos de apps para registro de ponto
 
 
 \chapter{App Universal par Registro de Ponto}
+
+% Desenho ( um diagrama ) sobre seria um aplicativo universal para o registro de ponto
 
 Neste capitulo apresentamos alguns wireframes que permitem entender o fluxo de navegação que propomos para este app.
 
@@ -217,7 +230,7 @@ Neste capitulo apresentamos alguns wireframes que permitem entender o fluxo de n
 
 \chapter{Prova de Conceito e Análise}
 
-Vamos colocar o aplicativo no mercado e avaliar a sua utilizacao
+% Vamos colocar o aplicativo no mercado e avaliar a sua utilizacao
 
 
 
@@ -225,7 +238,7 @@ Vamos colocar o aplicativo no mercado e avaliar a sua utilizacao
 
 \chapter{Consideracoes Finais}
 
-Escrever sobre o que foi feito e que no futuro irá integrar-se o registro de ponto seguro a um problema maior, que é a carteira de trabalho eletronica.
+% Escrever sobre o que foi feito e que no futuro irá integrar-se o registro de ponto seguro a um problema maior, que é a carteira de trabalho eletronica.
 
 
 \bibliography{bibliography}
