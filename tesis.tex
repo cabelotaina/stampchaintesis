@@ -1,0 +1,208 @@
+% online - https://pt.sharelatex.com/project/54c8c145ce57ee9e636bf385
+
+% base do documento https://projetos.inf.ufsc.br/arquivos/Padrao_de_Proposta.pdf
+% apoio latex https://github.com/luanadfreitas/latex
+\documentclass[12pt,openright,twoside,a4paper,english, brazil]{abntex2} % com draft as imagens desaparecem
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{tabularx}
+\usepackage[alf]{abntex2cite} % Citações padrão ABNT
+%\usepackage{lscape} % pacote para colocar página em paisagem
+\usepackage{color, colortbl} % colorir tabela
+\usepackage{multirow} % várias colunas
+\usepackage{verbatim} % usado pelo begin/end{comment}
+\usepackage{tikz-uml}
+\usepackage{usecases}
+
+%Siglas precisa desses pacotes
+\usepackage{datagidx}
+\newgidx{glossary}{Lista de Abreviaturas e Siglas}
+\DTLgidxSetDefaultDB{glossary}
+
+% Siglas
+\newterm[description={Trabalho de Conclusão de Curso}]{TCC}
+%\newterm[description={GNU's not Unix}]{GNU}
+%\newterm[description={GNU public license (Licença pública GNU)}]{GPL}
+%\newterm[description={Model, View and Control (Modelo, Visão e Controle)}]{MVC}
+%\newterm[description={C reate, R ead, U pdate e D elete}]{CRUD}
+\newterm[description={JavaScript}]{JS}
+\newterm[description={Universidade Federal de Santa Catarina}]{UFSC}
+\newterm[description={global positioning system}]{GPS}
+
+
+\makeindex
+
+
+
+% folha de rosto
+\title{Registro Eletrônico de Ponto Seguro baseado em Blockchain}
+\author{Maurilio Atila Carvalho de Santana}
+\orientador{Ricardo Felipe Custódio}
+\instituicao{Universidade Federal de Santa Catarina}
+\local{Florianópolis}
+\data{Fevereiro de 2018}
+
+\begin{document}
+\maketitle
+
+%\begin{folhadeaprovacao}
+%Trabalho sob o título \textit{Uma aplicação para o mapeamento de ocorrências e sugestões baseada no FixMyStreet e OpenStreetMap}, defendido por Maurilio Atila Carvalho de Santana e aprovado para obtenção do grau de Bacharel em Ciências da Computação em 28 de maio de 20015, em Florianópolis,
+%Estado de Santa Catarina, pela banca examinadora constituída pelos
+%membros:
+
+%\setlength{\ABNTsignthickness}{0.4pt}
+%\setlength{\ABNTsignwidth}{10cm}
+%\setlength{\ABNTsignskip}{3.5cm}
+
+%\assinatura{Prof. Antônio Carlos Mariani \\ Orientador}
+%\assinatura{Prof. Daniel Neis Araujo}
+%\assinatura{Prof. Everton da Silva }
+%\end{folhadeaprovacao}
+
+%\capa
+
+\folhaderosto
+\includepdf[pages={1}]{figuras/folha_de_aprovacao_proposta_tcc.pdf}	
+
+\begin{resumo}
+
+Este trabalho de conclusão de curso propõe uma aplicação mobile para o Registro Eletrônico de Ponto Seguro baseado em Blockchain e em tecnologias como GPS e o QR-CODE. O objetivo da ferramenta é permitir uma maior segurança tanto por parte do empregador quanto por parte do trabalhador, dado que mesmo com a portaria 1510 do MTE, que especifica o funcionamento dos relogios de ponto, ainda existem muitas fraudes e desconfiança quando a segurança, tanto por parte dos empregados, quanto por parte dos empregadores. Esperamos que este trabalho ofereça uma contribuição pontual para a discução do uso de blockchain pelo poder publico.
+
+\textbf{Palavras-chave: } Blockchain, Registro Eletrônico de Ponto, GPS, QR-CODE
+
+\end{resumo}
+
+% \begin{abstract}
+%
+% Este trabalho de conclusão de curso propõe uma aplicação mobile para o Registro Eletrônico de Ponto Seguro baseado em Blockchain e em tecnologias como GPS e o QR-CODE. O objetivo da ferramenta é permitir uma maior segurança tanto por parte do empregador quanto por parte do trabalhador, dado que mesmo com a portaria 1510 do MTE, que especifica o funcionamento dos relogios de ponto, ainda existem muitas fraudes e desconfiança quando a segurança, tanto por parte dos empregados, quanto por parte dos empregadores. Esperamos que este trabalho ofereça uma contribuição pontual para a discução do uso de blockchain pelo poder publico.
+%
+% \textbf{Keywords: } Blockchain, Registro Eletrônico de Ponto, GPS, QR-CODE
+%
+% \end{abstract}
+
+% Lista de figuras
+\pdfbookmark[0]{\listfigurename}{lof}
+\listoffigures*
+\cleardoublepage %pula uma página
+\pdfbookmark[0]{\listtablename}{lot}
+\listoftables* % Lista de tabelas
+\cleardoublepage
+\printterms[columns=1,style=align] % lista de abreviaturas e siglas
+\cleardoublepage % pula uma página
+%\listadesimbolos
+\tableofcontents
+
+
+
+
+
+
+
+
+\chapter{Introdução}
+
+\section{Registro de Ponto}
+
+O registro de ponto no Brasil é regulamentado pela lei ... e existe desde ...
+
+O registro de ponto surgiu em ... sendo utilizado para ...
+
+% Fale rapidamente sobre os requisitos de segurança impostos pela Portaria 1510
+
+%\section{Objetivos específicos}
+
+%O objetivo geral é criar ....
+
+%\begin{itemize}
+% \item Desenvolver ...
+%\end{itemize}
+
+%\section{Justificativa}
+
+%\section{Metodologia}
+
+%Análise de papers em bases de artigos cientificos. Leitura dos artigos similares a temática escolhida, e artigos relacionados aos conhecimentos basais necessários, para escrita deste projeto.
+
+%\section{Estrutura do Trabalho}
+
+
+
+
+
+
+
+
+\chapter{Registro Eletronico de Ponto}
+
+Use a Portaria 1510 e a 373 para isso. 
+
+Também veja os mais diversos sites na Internet sobre produto, sistemas etc.... e suas consideracoes
+
+Veja exemplos de apps para registro de ponto
+
+\section{Requisitos funcionais}
+
+\section{Requisitos não funcionais}
+
+\section{Sistemas de registro de ponto ( SREP )}
+
+%\section{Trabalhos Relacionados}
+
+
+
+
+
+
+
+
+\chapter{Tecnologias Relacionadas}
+
+\section{Blockchain}
+
+\section{GPS}
+
+\section{QR-Code}
+
+
+
+
+
+
+\chapter{App Universal par Registro de Ponto}
+
+Neste capitulo apresentamos alguns wireframes que permitem entender o fluxo de navegação que propomos para este app.
+
+\section{Tela Inicial}
+
+\section{Leitor de QR-CODE}
+
+\section{Configurações do Trabalhador}
+
+\section{Compartilhamento de informações}
+
+
+
+
+
+\chapter{Prova de Conceito e Análise}
+
+Vamos colocar o aplicativo no mercado e avaliar a sua utilizacao
+
+
+
+
+
+\chapter{Consideracoes Finais}
+
+Escrever sobre o que foi feito e que no futuro irá integrar-se o registro de ponto seguro a um problema maior, que é a carteira de trabalho eletronica.
+
+
+\bibliography{bibliography}
+
+\apendices
+
+\end{document}
