@@ -70,7 +70,7 @@
 
 \begin{resumo}
 
-Este trabalho de conclusão de curso propõe uma aplicação mobile para o Registro Eletrônico de Ponto Seguro baseado em Blockchain e em tecnologias como GPS e o QR-CODE. O objetivo da ferramenta é permitir uma maior segurança tanto por parte do empregador quanto por parte do trabalhador, dado que mesmo com a portaria 1510 do MTE, que especifica o funcionamento dos relogios de ponto, ainda existem muitas fraudes e desconfiança quando a segurança, tanto por parte dos empregados, quanto por parte dos empregadores. Esperamos que este trabalho ofereça uma contribuição pontual para a discução do uso de blockchain pelo poder publico.
+Este trabalho de conclusão de curso propõe uma aplicação mobile para o Registro Eletrônico de Ponto Seguro baseado em Blockchain e em tecnologias como GPS e o QR-CODE. O objetivo da ferramenta é permitir uma maior segurança tanto por parte do empregador quanto por parte do trabalhador, dado que mesmo com a portaria 1.510/2009 do MTE, que especifica o funcionamento dos relogios de ponto, ainda existem muitas fraudes e desconfiança quando a segurança, tanto por parte dos empregados, quanto por parte dos empregadores. Esperamos que este trabalho ofereça uma contribuição pontual para a discução do uso de blockchain pelo poder publico.
 
 \textbf{Palavras-chave: } Blockchain, Registro Eletrônico de Ponto, GPS, QR-CODE
 
@@ -122,8 +122,8 @@ Um relogio de ponto básico apenas carimba a data e o horario em cartões dos fu
 No Brasil o registro de ponto se dá de 3 formas:
 
 \begin{itemize}
- \item [Livro de Ponto] 
- \item [Mecânico] Básicamente os antigo relogios onde se bate o ponto por meio de um cartão de ponto.
+ \item [Livro de Ponto] Livro em que é assinado as entradas/saidas do trabalhador.
+ \item [Mecânico] Básicamente os antigos relogios onde se bate o ponto por meio de um cartão de ponto.
  \item [Eletrônico] \begin{itemize} 
  										 \item biométrica
  										 \item cartão de ponto
@@ -133,13 +133,13 @@ No Brasil o registro de ponto se dá de 3 formas:
 
 \subsection{Regulamentação do Ministério Trabalho e Emprego}
 
-O registro de ponto no Brasil é regulamentado pela portaria do Ministério do Trabalho e emprego \gls{MTE} Nº 1.510, de 21 de Agosto de 2009 e entrou vigência plena em 2011, o registro de ponto é obrigatório, a partir de 10 funcionários, e não deve em hiposete alguma ser alterado pelo empregador, existe um conjunto de empresas homologadas pelo MTE que tem permissão para oferecer estes equipamentos que segue um conjunto de normas especificas descritas na portaria acima citada.
+O registro de ponto eletrônico no Brasil é regulamentado pela portaria do \gls{MTE} Nº 1.510, de 21 de Agosto de 2009 e entrou vigência plena em 2011, o registro de ponto é obrigatório, a partir de 10 funcionários, e não deve em hipose alguma ser alterado pelo empregador, existe um conjunto de empresas homologadas pelo \gls{MTE} que tem permissão para oferecer estes equipamentos, que seguem um conjunto de normas especificadas na portaria.
 
 Além disso alguns tecnicos podem oferecer serviços de manutenção para o equipamento. Os equipamentos contam com relogio interno capaz de funcionar mesmo em situações de falta de energia, garante um horario com alta precisão bem como é protegido por meio de lacres e vários tipos de mecanismos contra adulteração, é realizada impressão interna em papel e existe uma memoria interna permanente, as estruturas de dados para armazenamento da informação são descritos nos anexos do documento.
 
-O equipamento possui uma porta \gls{USB}, de auditoria, para que os fiscais do MTE possam realizar processos de vistoria nos equipamentos a qualquer momento. Em casos de adulteração são tomadas as medidas civeis e criminais definidas na legislação. 
+O equipamento possui uma porta \gls{USB}, de auditoria, para que os fiscais do \gls{MTE} possam realizar processos de vistoria nos equipamentos a qualquer momento. Em casos de adulteração são tomadas as medidas civeis e criminais definidas na legislação. 
 
-Mas mesmo com todos esses mecanismos de proteção a ainda existe insegurança tanto por parte dos empregadores como dos empregados.
+Mas mesmo com todos esses mecanismos de proteção ainda existe insegurança tanto por parte dos empregadores como dos empregados.
 
 TODO: falar sobre o carimbo do tempo
 
@@ -151,14 +151,14 @@ O backend deve utilizar parte das estruturas de dados previstas na portaria 1.51
 
 Além disso outra ferramenta será um webapp com um dashboard mostrando como esta a frequencia de cada funcionario, voltado ao dono do contrato, neste caso o dono do estabelecimento. Os funcionários por sua vez podem ver sua frequencia e todo seu histórico de trabalho por meio do aplicativo no seu smartphone.
 
-O foco principal dessa ferramenta é apoiar o trabalhador e o empregador em situações de falha de um equipamento de registro de ponto, bem como em situações de desentendimento entre ambos. No entanto a portaria 3... permite o uso do sistema proposto como um registro de ponto online.
+O foco principal dessa ferramenta é apoiar o trabalhador e o empregador em situações de falha de um equipamento de registro de ponto, bem como em situações de desentendimento entre ambos. No entanto foi publicada a portaria 373/2011, trazendo uma nova redação, com a possibilidade de registro eletrônico de ponto, por sistemas alternativos. Isso permite que o sistema aqui proposto seja oficialmente aceito em conciliação com o \gls{REP} descrito na postaria 1.510/2009.
 
 
 \subsection{Blockchain}
 
 A blockchain nasce com o lançamento do artigo de Satoshi Nakamoto, uma pessoa ficticia, que ate o momento não se descobriu a verdadeira identidade, que trata sobre uma criptomoeda hoje conhecida como bitcoin. A blockchain em si é uma cadeia de blocos, onde cada bloco esta vinculado ao outro por meio de uma cadeia de identificadores hash, que é um algoritmo que mapeia dados de comprimento variável para dados de comprimento fixo. 
 
-Após o bitcoin outras criptomoedas surgiram e criaram suas proprias blockchains. Um caso especifico é o caso do ethereum. Na blockchain do etherium é possivel inserir smart contracts (contratos inteligêntes) que são código que será executado se elementos do contrato forem ...
+Após o bitcoin outras criptomoedas surgiram e criaram suas proprias blockchains. Um caso especifico é o caso do ethereum, uma outra criptomoeda. Na blockchain do etherium é possivel, além dos blocos de transação, inserir smart contracts (contratos inteligêntes) que é um código que será executado se elementos do contrato forem contemplados. O próprio contrato inteligente poderia efetuar o calculo e o deposito na carteira do trabalhador de uma quantia de etherium equivalente ao seu salario, naquele mês, em horas trabalhadas.
 
 \subsection{Geolocalização}
 
@@ -180,13 +180,13 @@ Em cada empresa que optar por nossa solução, podera ser inserido, um QR-Code n
 
 \subsection{App para dispositivos moveis}
 
-Os dispositivos moveis ultrapassaram o numero de computadores como aponta a agencia brasil da Empresa Brasileira de Comunicação \gls{EBC} sobre pesquisa do Intituto Brasileiro de Geografia e Estatistica \gls{IBGE}. Isso é um importante indicador de que o desenvolvimento de uma solução de registro de ponto na blockchain deve ser ao menos para o cliente (trabalhador) um app de smartphone.
+Os dispositivos moveis ultrapassaram o numero de computadores como aponta a agencia brasil da Empresa Brasileira de Comunicação \gls{EBC} sobre pesquisa do Intituto Brasileiro de Geografia e Estatistica \gls{IBGE}. Isso é um importante indicador de que o desenvolvimento de uma solução de registro de ponto na blockchain deve ser ao menos para o cliente (trabalhador) um app de smartphone dado que os dispositivos moveis hoje possuem a ubiqüidade satisfatória, dando conta de atender diversos tipos de trabalhadores.
 
-Ele deve permitir que o funcionario registre o ponto (entrada, (inicio e fim) do intervalo de lanche, saida). Atualização de informações do trabalhador. Avisar que seu expediente esta terminando. Registro de ponto automatico ao deixar local de trabalho para empregos presenciais. 
+O aplicativo deve permitir que o funcionário registre o ponto (entrada, (inicio e fim) do intervalo de lanche, saida). Atualização de informações do trabalhador. Avisar que seu expediente esta terminando. Registro de ponto automatico ao deixar local de trabalho para empregos presenciais, na sede do empregador. 
 
 \subsection{App Web}
 
-O empregador deve contar com uma app web para analisar os regitros de ponto de seus empregados, adicionar novos trabalhadores e atualizar as informações da empresa.
+O empregador deve contar com uma app web para analisar os regitros de ponto de seus empregados, adicionar novos trabalhadores e atualizar as informações da empresa. Similar a aplicações como o PHP Timeclock.
 
 
 \chapter{Registro Eletronico de Ponto}
@@ -204,39 +204,57 @@ o sistema deverá ...
 \subsection{Visão do trabalhador}
 
 \begin{itemize}
-\item realizar o registro de ponto automatico de um trabalhador, quando for trabalho presencial em local especificado, ao deixar o local de trabalho
-\item realizar o registro de ponto por QR-Code
-\item realizar o registro de ponto por Voz
-\item realizar a atualização dos seus proprios dados
+	\item realizar o registro de ponto automatico de um trabalhador, quando for trabalho presencial em local especificado, ao deixar o local de trabalho
+	\item realizar o registro de ponto por QR-Code
+	\item realizar o registro de ponto por Voz
+	\item realizar a atualização dos seus proprios dados
 \end{itemize}
+
 \subsection{Visão do empregador}
+
+
 \begin{itemize}
-\item realizar o cadastro de trabalhadores;
-\item realizar o cadastro da empresa;
-\item realizar o detalhamento dos registros de ponto de todos os trabalhadores por dia, mes e ano;
-\item realizar o alerta de horas (para mais e para menos) de um trabalhador;
+	\item realizar o cadastro de trabalhadores;
+	\item realizar o cadastro da empresa;
+	\item realizar o detalhamento dos registros de ponto de todos os trabalhadores por dia, mes e ano;
+	\item realizar o alerta de horas (para mais e para menos) de um trabalhador;
 \end{itemize}
 
 \section{Requisitos não funcionais}
 
-O software deverá ser uma aplicação Mobile para o trabalhador;
-O software deverá ser uma aplicação Web para o empregador;
-O backend deve utilizar blockchain (contrato inteligente) para armazenar os dados de cada empresa, cada trabalhador e seus registros de ponto.
-O registro de ponto deve ser inalterado.
-Somente usuários autorizados deverão ter acessos a essas informações;
-Um trabalhador não tem acesso a informação de outro trabalhador;
-O tempo de resposta das funcionalidades do sistema não deverá ultrapassar 40 segundos;
-A usabilidade do sistema deve ser de fácil aprendizagem.
+\begin{itemize}
+	\item O software deverá ser uma aplicação Mobile para o trabalhador;
+	\item O software deverá ser uma aplicação Web para o empregador;
+	\item O backend deve utilizar blockchain (contrato inteligente) para armazenar os dados de cada empresa, cada trabalhador e seus registros de ponto.
+	\item O registro de ponto deve ser inalterado.
+	\item Somente usuários autorizados deverão ter acessos as informações coletadas;
+	\item Um trabalhador não tem acesso a informação de outro trabalhador;
+	\item O tempo de resposta das funcionalidades do sistema não deverá ultrapassar 40 segundos;
+	\item A usabilidade do sistema deve ser de fácil aprendizagem.
+	\item Realizar registro de ponto (offline)
+	\item Historico dos registros de ponto no smartphone (com acesso offline).
+\end{itemize}
+
+\section{Sistemas de registro de ponto ( \gls{SREP} )}
+
+O Sistema de registro de ponto \gls{SREP} é disciplinado pelo artigo 1o da portaria 1.510/2009 do \gls{MTE}, o Artigo conta com um paragrafo unico que o define como "Sistema de Registro Eletrônico de Ponto - SREP - é o conjunto de equipamentos e programas informatizados destinado à anotação por meio eletrônico da entrada e saída dos trabalhadores das empresas, previsto no art. 74 da Consolidação das Leis do Trabalho - CLT, aprovada pelo Decreto-Lei no 5.452, de 1o de maio de 1943."
+
+O artigo 2o define o que o SREP deve e não deve permitir. O SREP deve registrar fielmente as marcações efetuadas.
+
+Não sendo permitida qualqueração que desvirtue os fins legais a que se destina, tais como:
+
+\begin{itemize}
+	\item [I] - restrições de horário à marcação do ponto;
+  \item [II] - marcação automática do ponto, utilizando-se horários predeterminados ou o horário contratual;
+  \item [III] - exigência, por parte do sistema, de autorização prévia para marcação de sobre jornada; e
+  \item [IV] - existência de qualquer dispositivo que permita a alteração dos dados registrados peloempregado.
+
+O Artigo 3o define o que é o Registrador Eletrônico de Ponto - REP como um "equipamento utilizado exclusivamente para o registro de jornada de trabalho e com capacidade para emitir documentos fiscais e realizar controles de natureza fiscal, referentes à entrada e à saída de empregados nos locais de trabalho." e define ainda o Parágrafo único "Para a utilização de Sistema de Registro Eletrônico de Ponto é obrigatório o uso do REP no local da prestação do serviço, vedados outros meios de registro", no entanto outra portaria permite o uso de meios de registro alternativo.
 
 
-\section{Sistemas de registro de ponto ( SREP )}
+Nos Anexos podemos ver algumas estruturas de dados utilizadas para descrever o funcionamento teorico do \gls{REP}.
 
-
-
-
-
-
-
+%TODO colocar os anexos
 
 \chapter{Tecnologias Relacionadas}
 
