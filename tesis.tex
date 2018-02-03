@@ -105,8 +105,6 @@ Este trabalho de conclusão de curso propõe uma aplicação mobile para o Regis
 
 \chapter{Introdução}
 
-
-
 Neste capitulo vamos apresentar um descrição dos objetivos deste trabalho explicitando suas partes e tecnologias envolvidas, o que um registro de ponto, desde de quanto ele vem sendo utilizado no Brasil, vamos apresentar as portarias que regulamentam seu uso.
 
 \section{Registro de Ponto}
@@ -117,15 +115,29 @@ https://www.google.com/patents/US452894
 
 Seu irmão entrou no negocio e começaram a fabricar relogios em grande escala, pela Bundy Manufacturing Company, notavelmente após alguns anos em 1911 eles mantinham a empresa Computing-Tabulating-Recording Company (CTR) o precursor da IBM.
 
-Um relogio de ponto básico apenas carimba a data e o horario em cartões dos funcionarios. Mas haviam relogios que foram criados por essa empresa de Bundy que continham por exemplo uma chave para cada funcionario, evitando fraudes. Hoje em dia existem relogios de ponto que utilizam biometria, e mesmo assim são burlados por meio de dedos de silicone por exemplo.
+Um relogio de ponto básico apenas carimba a data e o horario em cartões dos funcionarios. Mas haviam relogios que foram criados por essa empresa de Bundy que continham por exemplo uma chave para cada funcionario, "evitando fraudes". Hoje em dia existem relogios de ponto que utilizam biometria, e mesmo assim são burlados por meio de dedos de silicone por exemplo.
 
-\section{Regulamentação do Ministério Trabalho e Emprego}
+\section{Registro de Ponto no Brasil}
 
-O registro de ponto no Brasil é regulamentado portaria do Ministério do Trabalho e emprego MTE Nº 1.510, de 21 de Agosto de 2009 e entrou vigência plena em 2011, o registro de ponto é obrigatorio e não deve em hiposete alguma ser alterado pelo empregador, existe um conjunto de empresas homologadas pelo MTE que tem permissão para oferecer estes equipamentos que segue um conjunto de normas especificas descritas na portaria acima citada.
+No Brasil o registro de ponto se dá de 3 formas:
+
+\begin{itemize}
+ \item [Livro de Ponto] 
+ \item [Mecânico] Básicamente os antigo relogios onde se bate o ponto por meio de um cartão de ponto.
+ \item [Eletrônico] \begin{itemize} 
+ 										 \item biométrica
+ 										 \item cartão de ponto
+ 										 \item online (homologada pela Portaria 373)
+                    \end{itemize}
+\end{itemize}
+
+\subsection{Regulamentação do Ministério Trabalho e Emprego}
+
+O registro de ponto no Brasil é regulamentado pela portaria do Ministério do Trabalho e emprego \gls{MTE} Nº 1.510, de 21 de Agosto de 2009 e entrou vigência plena em 2011, o registro de ponto é obrigatório, a partir de 10 funcionários, e não deve em hiposete alguma ser alterado pelo empregador, existe um conjunto de empresas homologadas pelo MTE que tem permissão para oferecer estes equipamentos que segue um conjunto de normas especificas descritas na portaria acima citada.
 
 Além disso alguns tecnicos podem oferecer serviços de manutenção para o equipamento. Os equipamentos contam com relogio interno capaz de funcionar mesmo em situações de falta de energia, garante um horario com alta precisão bem como é protegido por meio de lacres e vários tipos de mecanismos contra adulteração, é realizada impressão interna em papel e existe uma memoria interna permanente, as estruturas de dados para armazenamento da informação são descritos nos anexos do documento.
 
-O equipamento possui uma porta USB, de auditoria, para que os fiscais do MTE possam realizar processos de vistoria nos equipamentos a qualquer momento. Em casos de adulteração são tomadas as medidas civeis e criminais definidas na legislação. 
+O equipamento possui uma porta \gls{USB}, de auditoria, para que os fiscais do MTE possam realizar processos de vistoria nos equipamentos a qualquer momento. Em casos de adulteração são tomadas as medidas civeis e criminais definidas na legislação. 
 
 Mas mesmo com todos esses mecanismos de proteção a ainda existe insegurança tanto por parte dos empregadores como dos empregados.
 
@@ -137,25 +149,44 @@ Este trabalho tem o intuito de permitir o registro de ponto pelo empregador e tr
 
 O backend deve utilizar parte das estruturas de dados previstas na portaria 1.510 do MTE, que regulamenta o registro de ponto, com o intuito de estar de acordo com outros relogios de ponto reais. Essas estruturas de dados serão visiveis porem somente de leitura por parte das empresas, para isso vamos contar com um contrato inteligente que será usado como folha de ponto, cada vez que um funcionário entrar ou sair da empresa as estruturas de dados serão modificadas para refletir a entrada ou saida desse trabalhador.
 
-Além disso outra ferramenta será um webapp com um dashboard mostrando como esta a frequencia de cada funcionario. Os funcionários por sua vez podem ver sua frequencia e todo seu histórico de trabalho por meio do aplicativo no seu smartphone.
+Além disso outra ferramenta será um webapp com um dashboard mostrando como esta a frequencia de cada funcionario, voltado ao dono do contrato, neste caso o dono do estabelecimento. Os funcionários por sua vez podem ver sua frequencia e todo seu histórico de trabalho por meio do aplicativo no seu smartphone.
 
-O foco principal dessa ferramenta é apoiar o trabalhador e o empregador em situações de falha de um equipamnento de registro de ponto, bem como em situações de desentendimento entre ambos.
-
+O foco principal dessa ferramenta é apoiar o trabalhador e o empregador em situações de falha de um equipamento de registro de ponto, bem como em situações de desentendimento entre ambos. No entanto a portaria 3... permite o uso do sistema proposto como um registro de ponto online.
 
 
 \subsection{Blockchain}
-para evitar fraudes
-\subsection{GPS}
-para localização especial (outros mecanismos alternativos de localização)
+
+A blockchain nasce com o lançamento do artigo de Satoshi Nakamoto, uma pessoa ficticia, que ate o momento não se descobriu a verdadeira identidade, que trata sobre uma criptomoeda hoje conhecida como bitcoin. A blockchain em si é uma cadeia de blocos, onde cada bloco esta vinculado ao outro por meio de uma cadeia de identificadores hash, que é um algoritmo que mapeia dados de comprimento variável para dados de comprimento fixo. 
+
+Após o bitcoin outras criptomoedas surgiram e criaram suas proprias blockchains. Um caso especifico é o caso do ethereum. Na blockchain do etherium é possivel inserir smart contracts (contratos inteligêntes) que são código que será executado se elementos do contrato forem ...
+
+\subsection{Geolocalização}
+
+O Global Position System \gls{GPS}, é tecnologia extremamente difundida, hoje todos os smartphones possuem alguma tecnologia de geoposicionamento. O \gls{GPS} é apenas um dos sistemas de geoposionamento, existem outros, um exemplo é o sistema de navegação global por satélite Russo \gls{GLONASS}, outro seria o chines \gls{Beidou}.
+
+Para geolocalizar uma dispositivo \gls{GPS} é necessário a triangulação com os satelites mais proximos. Básicamente é possivel obter informação de latitude, longitude e altimetria, existem dispositivos com alta precisão que usam uma quarta estação em terra.
+
+No entanto o geoposicionamento por satelite nem sempre funciona, por isso foram criadas formas alternativas de geoposicionamento. Uma delas utiliza o \gls{WIFI} como referencia para obter informação de geoposicionamento. A proximidade ou a distancia pode ser medida pela força do sinal WIFI, e os dispositivos contam com MAC Adress (um endereço  único), e outros meios que permitem diferenciar os dispositivos, criando um mapeamento <id, position>.
+
+% pensar em outras altertivas de localização
+
+
 \subsection{QR-Code}
+
+É um codigo de barras bidimencional que pode ser facilmente escaneado usando a maioria dos telefones celulares equipados com camera. No código QR é possivel armazenar informação como links e texto. Na versão 40 é possivel armazenar grande quantidade de texto, além disso mesmo danificado, dependendo do dano, todavia seria possivel obter a informação armazenada no QR-Code.
+
+Em cada empresa que optar por nossa solução, podera ser inserido, um QR-Code na entrada, de forma que o trabalhador possa escanea-lo nos varios momento de checkin e checkout de jornada de trabalho. Automanticamente será feito o registro de ponto deste trabalhador.
+
+
 \subsection{App para dispositivos moveis}
 
+Os dispositivos moveis ultrapassaram o numero de computadores como aponta a agencia brasil da Empresa Brasileira de Comunicação \gls{EBC} sobre pesquisa do Intituto Brasileiro de Geografia e Estatistica \gls{IBGE}. Isso é um importante indicador de que o desenvolvimento de uma solução de registro de ponto na blockchain deve ser ao menos para o cliente (trabalhador) um app de smartphone.
 
+Ele deve permitir que o funcionario registre o ponto (entrada, (inicio e fim) do intervalo de lanche, saida). Atualização de informações do trabalhador. Avisar que seu expediente esta terminando. Registro de ponto automatico ao deixar local de trabalho para empregos presenciais. 
 
+\subsection{App Web}
 
-
-
-
+O empregador deve contar com uma app web para analisar os regitros de ponto de seus empregados, adicionar novos trabalhadores e atualizar as informações da empresa.
 
 
 \chapter{Registro Eletronico de Ponto}
@@ -167,7 +198,35 @@ para localização especial (outros mecanismos alternativos de localização)
 
 \section{Requisitos funcionais}
 
+o sistema deverá ...
+
+
+\subsection{Visão do trabalhador}
+
+realizar o registro de ponto automatico de um trabalhador, quando for trabalho presencial em local especificado, ao deixar o local de trabalho
+realizar o registro de ponto por QR-Code
+realizar o registro de ponto por Voz
+realizar a atualização dos seus proprios dados
+
+\subsection{Visão do empregador}
+
+realizar o cadastro de trabalhadores;
+realizar o cadastro da empresa;
+realizar o detalhamento dos registros de ponto de todos os trabalhadores por dia, mes e ano;
+realizar o alerta de horas (para mais e para menos) de um trabalhador;
+
+
 \section{Requisitos não funcionais}
+
+O software deverá ser uma aplicação Mobile para o trabalhador;
+O software deverá ser uma aplicação Web para o empregador;
+O backend deve utilizar blockchain (contrato inteligente) para armazenar os dados de cada empresa, cada trabalhador e seus registros de ponto.
+O registro de ponto deve ser inalterado.
+Somente usuários autorizados deverão ter acessos a essas informações;
+Um trabalhador não tem acesso a informação de outro trabalhador;
+O tempo de resposta das funcionalidades do sistema não deverá ultrapassar 40 segundos;
+A usabilidade do sistema deve ser de fácil aprendizagem.
+
 
 \section{Sistemas de registro de ponto ( SREP )}
 
@@ -186,6 +245,8 @@ Neste capitulo vamos apresentar as principais tecnologias que são utilizadas ne
 
 \section{Assinatura Digital}
 
+...
+
 \section{Blockchain}
 
 test-RPC (O que é RPC)
@@ -200,15 +261,7 @@ O carimbo do tempo é regulamentado pela ... e é utilizado para ...
 
 \section{Apps Móveis}
 
-O desenvolvimento de apps móveis é algo extremamente importante dado o aumento significativo do numero destes dispositivos, ele já ultrapassou o numero de computadores, cada vez mais a população adere a este tipo de tecnologia e surgiram varias empresas que oferecem deste hardware a software (sistemas operacionais e aplicativos) para resolver demandas dos usuários.
-
-Existem diversos frameworks que permitem desenvolver apps móveis para os sistemas operacionais mais conhecidos, neste priojeto vamos utilizar o Ionic.
-
-
-
-
-
-
+Existem diversos frameworks que permitem desenvolver apps móveis para os sistemas operacionais mais conhecidos, neste priojeto vamos utilizar o Ionic um framework javascript que permite gerar apps mobile.
 
 \chapter{App Universal par Registro de Ponto}
 
@@ -224,17 +277,9 @@ Neste capitulo apresentamos alguns wireframes que permitem entender o fluxo de n
 
 \section{Compartilhamento de informações}
 
-
-
-
-
 \chapter{Prova de Conceito e Análise}
 
 % Vamos colocar o aplicativo no mercado e avaliar a sua utilizacao
-
-
-
-
 
 \chapter{Consideracoes Finais}
 
